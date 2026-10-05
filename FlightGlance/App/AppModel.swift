@@ -318,7 +318,7 @@ final class AppModel {
                      distanceToGo: ReadingFormatter.distance(remaining, units: units).joined, arrival: arrival,
                      progress: GeoMath.routeProgress(of: position, from: plan.origin.coordinate,
                                                      to: plan.destination.coordinate),
-                     updated: fix.timestamp, estimatedAt: estimated ? now : nil, isSearching: false)
+                     updated: fix.timestamp, isSearching: false)
     }
 
     /// Saves the track at most every 30 s (or immediately when forced) so a crash or

@@ -21,6 +21,7 @@
 		2E72E96583DCDCAEDC80AB6F /* TrackingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8523DCE36CB4A59C267AF4E2 /* TrackingTests.swift */; };
 		302CE9C1434822D342CA32E3 /* AtlasMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1C977C5769F138E20453DF /* AtlasMapView.swift */; };
 		3F22B16D8F9B008AD575C03D /* StatusViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB9D1AE7EC271FF053A2D46 /* StatusViews.swift */; };
+		45196225A141B40657F1A519 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5C87B847D2151ECC886C858 /* Assets.xcassets */; };
 		48F9CBFF809B50892AAFF8DB /* FlightStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7025CA5316F65A06A6B73A15 /* FlightStore.swift */; };
 		4B47C0E70C7B2F9177A34491 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3794BEBE89BFBDD58AE9DB95 /* DashboardView.swift */; };
 		4F52E175B918139F4CB7EB10 /* Regions.json in Resources */ = {isa = PBXBuildFile; fileRef = AFADFC0F79DEC44091986475 /* Regions.json */; };
@@ -140,6 +141,7 @@
 		BF53173FF4D074757EFFD632 /* AirportDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportDatabase.swift; sourceTree = "<group>"; };
 		C0B8BD866B7B5AE8D72130AD /* MapAnnotations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAnnotations.swift; sourceTree = "<group>"; };
 		C4AC213C4FCD275A82091335 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		C5C87B847D2151ECC886C858 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C96CA2EEED84455BB7FD1158 /* FlightActivityAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightActivityAttributes.swift; sourceTree = "<group>"; };
 		CDDED754A992A4CB00E1A3D5 /* FlightGlanceTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = FlightGlanceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEEE9D03E809C54F6E3C6C65 /* ETAEstimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETAEstimator.swift; sourceTree = "<group>"; };
@@ -249,6 +251,7 @@
 		67462BAB65BAB4769ADE60D1 /* FlightGlanceWidgets */ = {
 			isa = PBXGroup;
 			children = (
+				C5C87B847D2151ECC886C858 /* Assets.xcassets */,
 				FA3556B59DB4D5D9730D726D /* FlightLiveActivity.swift */,
 				B10A71B96337359DBFC77EF8 /* Info.plist */,
 			);
@@ -416,6 +419,7 @@
 			buildConfigurationList = 12455624AC0F550080C123FD /* Build configuration list for PBXNativeTarget "FlightGlanceWidgets" */;
 			buildPhases = (
 				CC3C9681ECD8F4BDF835ED22 /* Sources */,
+				D25D42B54D645702B96B4554 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -480,6 +484,14 @@
 				4F52E175B918139F4CB7EB10 /* Regions.json in Resources */,
 				890A29234CDD59DC48D614AC /* Towns.json in Resources */,
 				575D2A50437E0E9C59D12AE8 /* WorldAtlas.bin in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D25D42B54D645702B96B4554 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45196225A141B40657F1A519 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

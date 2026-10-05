@@ -17,9 +17,6 @@ struct FlightActivityAttributes: ActivityAttributes {
         var progress: Double?
         /// Time of the GPS fix this content is based on.
         var updated: Date
-        /// Set when the position was estimated forward from that fix to this time, between
-        /// GPS samples while the phone is locked.
-        var estimatedAt: Date?
         /// No current position: the views show a searching state.
         var isSearching: Bool
     }

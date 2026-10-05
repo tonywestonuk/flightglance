@@ -90,7 +90,21 @@ private struct LockScreenView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
-            RouteLine(attributes: attributes, progress: state.progress)
+            HStack(spacing: 12) {
+                // Which app this is, kept small so it doesn't compete with the flight.
+                HStack(spacing: 6) {
+                    Image("AppLogo")
+                        .resizable()
+                        .frame(width: 18, height: 18)
+                        .clipShape(RoundedRectangle(cornerRadius: 4.5, style: .continuous))
+                        .accessibilityHidden(true)
+                    Text("FlightGlance")
+                        .font(.caption.weight(.semibold))
+                        .foregroundStyle(Color.white.opacity(0.7))
+                }
+                .fixedSize()
+                RouteLine(attributes: attributes, progress: state.progress)
+            }
             HStack(alignment: .firstTextBaseline, spacing: 12) {
                 // Where
                 VStack(alignment: .leading, spacing: 2) {
@@ -131,26 +145,16 @@ private struct LockScreenView: View {
                 // so give the column a fixed width or it pushes everything else off the card.
                 .frame(width: 118, alignment: .trailing)
             }
-            HStack {
-                if let distance = state.distanceToGo, !state.isSearching {
-                    Text("\(distance) to go")
-                        .foregroundStyle(Color.white.opacity(0.8))
-                }
-                Spacer()
-                // Stale means no update for 12+ minutes: the app isn't running (or has no GPS),
-                // so say so rather than look live.
-                Text(isStale ? "Not updating — open FlightGlance" : updatedText)
-                    .foregroundStyle(isStale ? Color.orange : Color.white.opacity(0.7))
+            // Stale means no update for 12+ minutes: the app isn't running (or has no GPS),
+            // so say so rather than look live.
+            if isStale {
+                Text("Not updating — tap to open")
+                    .font(.caption.weight(.semibold))
+                    .foregroundStyle(Color.orange)
             }
-            .font(.caption)
         }
         .foregroundStyle(.white)
         .padding(16)
-    }
-
-    private var updatedText: String {
-        let fixTime = "GPS \(state.updated.formatted(date: .omitted, time: .shortened))"
-        return state.estimatedAt == nil ? fixTime : "Estimated from \(fixTime)"
     }
 }
 

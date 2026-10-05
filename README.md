@@ -123,8 +123,7 @@ off. When the phone locks:
   suspends apps that stop location updates, so between fixes a coarse 3 km request keeps the
   session alive without needing the GPS receiver. No map is drawn; every 30 s the last fix is
   carried forward along its course at its ground speed (dead reckoning, at most 10 minutes,
-  not below ~50 kt) and the Live Activity is updated with the estimated position, marked
-  "Estimated from GPS hh:mm".
+  not below ~50 kt) and the Live Activity is updated with the estimated position.
   iOS shows a location indicator. Live Activities last up to 8 hours; opening the app starts
   a fresh one.
 - with it off, the GPS stops and iOS suspends the app; the unobserved stretch shows as a dotted
