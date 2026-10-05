@@ -109,28 +109,11 @@ struct SetupView: View {
     }
 
     private var routeCard: some View {
-        @Bindable var model = model
-        return VStack(alignment: .leading, spacing: 10) {
+        VStack(alignment: .leading, spacing: 10) {
             Eyebrow("Route")
-            ZStack(alignment: .trailing) {
-                VStack(spacing: 8) {
-                    AirportField(label: "From", airport: model.draft.origin) { picking = .origin }
-                    AirportField(label: "To", airport: model.draft.destination) { picking = .destination }
-                }
-                Button {
-                    withAnimation(.smooth) {
-                        swap(&model.draft.origin, &model.draft.destination)
-                    }
-                } label: {
-                    Image(systemName: "arrow.up.arrow.down")
-                        .font(.body.weight(.semibold))
-                        .frame(width: 40, height: 40)
-                        .background(Theme.card, in: Circle())
-                        .overlay(Circle().strokeBorder(Theme.cardBorder))
-                }
-                .padding(.trailing, 44)
-                .accessibilityLabel("Swap departure and arrival")
-                .disabled(model.draft.origin == nil && model.draft.destination == nil)
+            VStack(spacing: 8) {
+                AirportField(label: "From", airport: model.draft.origin) { picking = .origin }
+                AirportField(label: "To", airport: model.draft.destination) { picking = .destination }
             }
 
             if let plan = model.draft.plan {
