@@ -58,6 +58,43 @@ struct GPSStatusPill: View {
 }
 
 /// Explanatory banner shown over the map when something needs the user's attention.
+/// Shown while the phone is still on a mobile network during a flight: a reminder, which can be
+/// dismissed (some airlines allow phones on board networks).
+struct AirplaneModeBanner: View {
+    let dismiss: () -> Void
+
+    var body: some View {
+        HStack(alignment: .center, spacing: 10) {
+            Image(systemName: "airplane")
+                .font(.body.weight(.semibold))
+                .foregroundStyle(Theme.caution)
+                .accessibilityHidden(true)
+            VStack(alignment: .leading, spacing: 2) {
+                Text("Airplane Mode is off").font(.subheadline.weight(.semibold))
+                Text("Turn it on for the flight. FlightGlance doesn't need a signal.")
+                    .font(.caption)
+                    .foregroundStyle(Theme.secondaryText)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+            .accessibilityElement(children: .combine)
+            Spacer(minLength: 0)
+            Button(action: dismiss) {
+                Image(systemName: "xmark")
+                    .font(.footnote.weight(.semibold))
+                    .foregroundStyle(Theme.secondaryText)
+                    .frame(width: 44, height: 44)
+                    .contentShape(Rectangle())
+            }
+            .accessibilityLabel("Dismiss")
+        }
+        .padding(.leading, 12)
+        .padding(.vertical, 2)
+        .frame(maxWidth: 520)
+        .floatingChrome(in: RoundedRectangle(cornerRadius: 14, style: .continuous))
+        .transition(.move(edge: .top).combined(with: .opacity))
+    }
+}
+
 struct SignalBanner: View {
     let signal: GPSSignalState
     let isPrecise: Bool

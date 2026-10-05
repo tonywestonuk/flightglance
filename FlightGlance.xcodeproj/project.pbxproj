@@ -31,6 +31,7 @@
 		5F207DAE6AE96892F0DE8F62 /* GPSFix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD65AB6F74FF3B723A28AF1 /* GPSFix.swift */; };
 		65AA20FB64C91ACDEEE51440 /* DataAndServicesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF319952C947CD1068BE755 /* DataAndServicesTests.swift */; };
 		65BAD0729BBC863C6254A483 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D6E9EE2C28FA220933815B /* AppModel.swift */; };
+		65CA2E541135288180970883 /* CellularMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8EF8ECC6EA9E8EE14BF162 /* CellularMonitor.swift */; };
 		666BFC0C440A98B3D49EA33B /* TrackRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1746AE0DFB8947F61B76F6E2 /* TrackRecorder.swift */; };
 		6DDFE68626C73D7CF6933E8D /* GPSSignalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD6DC71B702D98C2B33F05F /* GPSSignalState.swift */; };
 		7044108C3200B7E3CEB1FE44 /* FlightActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96CA2EEED84455BB7FD1158 /* FlightActivityAttributes.swift */; };
@@ -132,6 +133,7 @@
 		8AB9D1AE7EC271FF053A2D46 /* StatusViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusViews.swift; sourceTree = "<group>"; };
 		95BE0A77F3159FA7F2A59582 /* Cities.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Cities.json; sourceTree = "<group>"; };
 		9CF319952C947CD1068BE755 /* DataAndServicesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAndServicesTests.swift; sourceTree = "<group>"; };
+		9D8EF8ECC6EA9E8EE14BF162 /* CellularMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellularMonitor.swift; sourceTree = "<group>"; };
 		A0BF238518842C0EDB725445 /* SetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupView.swift; sourceTree = "<group>"; };
 		A1611C309182E83C36C37D54 /* Countries.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Countries.json; sourceTree = "<group>"; };
 		AFADFC0F79DEC44091986475 /* Regions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Regions.json; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				BF53173FF4D074757EFFD632 /* AirportDatabase.swift */,
+				9D8EF8ECC6EA9E8EE14BF162 /* CellularMonitor.swift */,
 				644A6B43F1BB6DB110FB92DC /* FlightSimulation.swift */,
 				7025CA5316F65A06A6B73A15 /* FlightStore.swift */,
 				D480D44C7FF4CB14AE8A78D8 /* LiveActivityController.swift */,
@@ -522,6 +525,7 @@
 				65BAD0729BBC863C6254A483 /* AppModel.swift in Sources */,
 				302CE9C1434822D342CA32E3 /* AtlasMapView.swift in Sources */,
 				13D61E618963C68E650C94AD /* AtlasRenderer.swift in Sources */,
+				65CA2E541135288180970883 /* CellularMonitor.swift in Sources */,
 				4B47C0E70C7B2F9177A34491 /* DashboardView.swift in Sources */,
 				E89709E562C6E706DC4E1515 /* ETAEstimator.swift in Sources */,
 				7044108C3200B7E3CEB1FE44 /* FlightActivityAttributes.swift in Sources */,

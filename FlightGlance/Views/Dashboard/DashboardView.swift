@@ -14,6 +14,7 @@ struct DashboardView: View {
     @State private var map = MapController(style: MapStyle(rawValue: UserDefaults.standard.string(forKey: AppModel.mapStyleKey) ?? "") ?? .globe)
     @State private var confirmingEnd = false
     @State private var showingAbout = false
+    @State private var airplaneReminderDismissed = false
     @AppStorage(AppModel.unitsKey) private var units: UnitSystem = .aviation
     @AppStorage(AppModel.mapStyleKey) private var mapStyle: MapStyle = .globe
     @AppStorage("readingsHidden") private var readingsHidden = false
@@ -119,6 +120,9 @@ struct DashboardView: View {
                     SignalBanner(signal: readings.signal, isPrecise: model.location.isPrecise,
                                  requestPermission: model.location.requestPermission,
                                  requestPrecise: model.location.requestTemporaryPreciseLocation)
+                    if model.cellular.isConnected && !airplaneReminderDismissed {
+                        AirplaneModeBanner { withAnimation { airplaneReminderDismissed = true } }
+                    }
                 }
                 .padding(.horizontal, 12)
                 .padding(.top, 6)

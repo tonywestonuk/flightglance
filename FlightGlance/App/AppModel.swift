@@ -26,6 +26,7 @@ final class AppModel {
     }
 
     let location = LocationService()
+    let cellular = CellularMonitor()
     private(set) var atlas: WorldAtlas?
     private(set) var airports: AirportDatabase?
     private(set) var places: PlaceFinder?
@@ -133,6 +134,7 @@ final class AppModel {
             if keepUpdating { enterLowPowerBackground() } else { location.pause() }
         case .active:
             stopLockScreenEstimates()
+            cellular.refresh()
             location.resume()
             refreshLiveActivity()
         @unknown default:
