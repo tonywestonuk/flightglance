@@ -61,7 +61,7 @@ xcrun devicectl device install app --device <device-id> \
 - Launch arguments (Xcode scheme or `simctl launch`) with sample routes `DEMO1`…`DEMO6`
   (LHR–JFK, SFO–NRT, SYD–LAX, DXB–LAX, SIN–LHR, JFK–SFO): `-FGDemo DEMO2` starts a simulated flight;
   add `-FGLive YES` to use real Core Location instead (e.g. with `xcrun simctl location … start`);
-  `-FGDraft DEMO5` only pre-fills setup; `-FGLandscape YES` rotates; `-FGEdit YES` opens the edit
+  `-FGDraft DEMO5` only pre-fills setup; `-FGCellular YES` shows the Airplane Mode reminder; `-FGLandscape YES` rotates; `-FGEdit YES` opens the edit
   screen; `-FGResetState` clears a saved flight.
 
 Release builds contain no sample data and no simulator UI.
@@ -117,7 +117,9 @@ measured along the great circle from the origin. The solid line is the GPS track
 
 **GPS.** This isn't a satnav, so the GPS is duty-cycled: every 15, 30 (default) or 60 seconds
 it is switched on until it gets one fix within 100 m (or the best fix within 45 s), then switched
-off. When the phone locks:
+off. That needs a lock: starting cold, especially in Airplane Mode where no assistance data can be
+downloaded, a first fix can take minutes of continuous listening, so without a recent lock the GPS
+stays on until it gets one (up to 2 minutes per sample in the low-power mode). When the phone locks:
 - with **Show on Lock Screen** on (default), the app enters a low-power background mode: one
   looser (~100 m) fix every 5 minutes, giving up after 30 s, and a Live Activity update. iOS
   suspends apps that stop location updates, so between fixes a coarse 3 km request keeps the
@@ -150,6 +152,12 @@ Layouts adapt to the available size: map above readings in portrait (the panel s
 would exceed half the height), and a sidebar in landscape. They respect safe areas, scale with
 Dynamic Type (tiles stack to one column at accessibility sizes), give VoiceOver labels and values
 for every reading and the map, and never rely on colour alone for status.
+
+## Privacy and support
+
+FlightGlance collects no data; see the [privacy policy](PRIVACY.md). For help, see
+[support](SUPPORT.md). App Store listing text and review notes are in
+[AppStore/Listing.md](AppStore/Listing.md).
 
 ## Data credits
 

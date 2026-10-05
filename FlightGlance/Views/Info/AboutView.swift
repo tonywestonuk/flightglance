@@ -27,6 +27,8 @@ struct AboutView: View {
                               text: "GPS is a receiver, so it keeps working in Airplane Mode. The map is built into the app; no tiles or network are used in flight.")
                     Explainer(title: "Stays on your iPhone", symbol: "lock.fill",
                               text: "Your location and track are stored only on this device, and are deleted when you end the flight.")
+                    Link("Privacy Policy", destination: URL(string: "https://github.com/tonywestonuk/flightglance/blob/main/PRIVACY.md")!)
+                        .font(.subheadline)
                 }
 
                 Section("Map & data credits") {
