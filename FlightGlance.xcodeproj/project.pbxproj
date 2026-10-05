@@ -1,0 +1,851 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		006307F968E94E6D46F50326 /* FlightSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B0DF192EE9B9D56755CD7A /* FlightSession.swift */; };
+		0CF32AD94341650F53B278D8 /* ETAEstimatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1982D56BA209546F0338EF67 /* ETAEstimatorTests.swift */; };
+		0EE6F61CEFE8D6DDAF4BFA88 /* UnitSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB400C1C3C95D6123134A53 /* UnitSystem.swift */; };
+		13D61E618963C68E650C94AD /* AtlasRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71895F3EBA361F704763C89B /* AtlasRenderer.swift */; };
+		167DBFA47A2A933B2DAE4A37 /* FlightSimulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644A6B43F1BB6DB110FB92DC /* FlightSimulation.swift */; };
+		19EDA661B6678DD8390AD65E /* Countries.json in Resources */ = {isa = PBXBuildFile; fileRef = A1611C309182E83C36C37D54 /* Countries.json */; };
+		1A6E9D736DCB9418438CE34E /* GeoCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4731764C292481A05B2AD799 /* GeoCamera.swift */; };
+		1C7280672CBE7ABF2FF0806D /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB4E2BA4D22A1B9F299658B /* Theme.swift */; };
+		276CF58B8E8A995FA8EF3497 /* FlightActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96CA2EEED84455BB7FD1158 /* FlightActivityAttributes.swift */; };
+		28C0938B1064A7B59C4A68F2 /* LocationStatusCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11045B0C9748BFA52F88D28 /* LocationStatusCard.swift */; };
+		2C24D5AB282EB57B9EFAB6FD /* ProjectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB390BE98E9954BA0737452B /* ProjectionTests.swift */; };
+		2E72E96583DCDCAEDC80AB6F /* TrackingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8523DCE36CB4A59C267AF4E2 /* TrackingTests.swift */; };
+		302CE9C1434822D342CA32E3 /* AtlasMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1C977C5769F138E20453DF /* AtlasMapView.swift */; };
+		3F22B16D8F9B008AD575C03D /* StatusViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB9D1AE7EC271FF053A2D46 /* StatusViews.swift */; };
+		48F9CBFF809B50892AAFF8DB /* FlightStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7025CA5316F65A06A6B73A15 /* FlightStore.swift */; };
+		4B47C0E70C7B2F9177A34491 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3794BEBE89BFBDD58AE9DB95 /* DashboardView.swift */; };
+		4F52E175B918139F4CB7EB10 /* Regions.json in Resources */ = {isa = PBXBuildFile; fileRef = AFADFC0F79DEC44091986475 /* Regions.json */; };
+		575D2A50437E0E9C59D12AE8 /* WorldAtlas.bin in Resources */ = {isa = PBXBuildFile; fileRef = 7DF8E06D966B6A5CE47B5DC9 /* WorldAtlas.bin */; };
+		592AD5D9DB7264B9EB5A719B /* GlobeProjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A16ACD98CE61D0EEFD237A /* GlobeProjection.swift */; };
+		5C061C3F9EF8BCAF30663F27 /* MapAnnotations.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B8BD866B7B5AE8D72130AD /* MapAnnotations.swift */; };
+		5F207DAE6AE96892F0DE8F62 /* GPSFix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD65AB6F74FF3B723A28AF1 /* GPSFix.swift */; };
+		65AA20FB64C91ACDEEE51440 /* DataAndServicesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF319952C947CD1068BE755 /* DataAndServicesTests.swift */; };
+		65BAD0729BBC863C6254A483 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D6E9EE2C28FA220933815B /* AppModel.swift */; };
+		666BFC0C440A98B3D49EA33B /* TrackRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1746AE0DFB8947F61B76F6E2 /* TrackRecorder.swift */; };
+		6DDFE68626C73D7CF6933E8D /* GPSSignalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD6DC71B702D98C2B33F05F /* GPSSignalState.swift */; };
+		7044108C3200B7E3CEB1FE44 /* FlightActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96CA2EEED84455BB7FD1158 /* FlightActivityAttributes.swift */; };
+		7473E6FEC9DACA4FC69CBDC5 /* LiveActivityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D480D44C7FF4CB14AE8A78D8 /* LiveActivityController.swift */; };
+		786FA5ADF71DA9CA40E2E552 /* GeoMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740F6F7616B3D18E46E28D58 /* GeoMath.swift */; };
+		7B5FB74B1A046A505D37CB1D /* FlightGlanceWidgets.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E83978F7E2D69C60A06CCA7B /* FlightGlanceWidgets.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7BB7744B4119630B4C6F7778 /* FlightGlanceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF05602CC67C984B8FB3F031 /* FlightGlanceApp.swift */; };
+		7EC06D1729C73ABDD5187211 /* Airports.json in Resources */ = {isa = PBXBuildFile; fileRef = 701D5F044F5721D7F215D449 /* Airports.json */; };
+		890A29234CDD59DC48D614AC /* Towns.json in Resources */ = {isa = PBXBuildFile; fileRef = 87E9C3A17C9B3CF2F46C7D38 /* Towns.json */; };
+		8B7DA58E3F407AEEA10297A9 /* ReadingsSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5481623BE85EF793C3420A4D /* ReadingsSummary.swift */; };
+		95E516377FD93C83CCE6C025 /* Cities.json in Resources */ = {isa = PBXBuildFile; fileRef = 95BE0A77F3159FA7F2A59582 /* Cities.json */; };
+		99640038D1EB5E403F312AF6 /* MetricsGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B86B77D568FBC7F2801666 /* MetricsGrid.swift */; };
+		9B5FEDBE83D1A77180154997 /* Areas.json in Resources */ = {isa = PBXBuildFile; fileRef = 1BA9137B836EBA090B8C86DD /* Areas.json */; };
+		AB95EDF8CF84538EFF941263 /* AirportPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B25780B5684FB9D84D8EEF /* AirportPickerView.swift */; };
+		B1E47B0E14A67B7EE8B2E071 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 802EA6AE0D6C61B1AB130948 /* PrivacyInfo.xcprivacy */; };
+		B41109346C83FBDAD76DF44E /* MapCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F9CBF3F7FCCCBAC95011EB /* MapCamera.swift */; };
+		B66CD8E68AC68CFBC7C22A68 /* AirportDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF53173FF4D074757EFFD632 /* AirportDatabase.swift */; };
+		BD4C0A88C0AEDD30155C66E9 /* GlobeRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003D718C0A2D84E2DECE75E2 /* GlobeRenderer.swift */; };
+		C2608E61F6EEEBBF9AB00E2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF104BAD266A3B54BA99159C /* Assets.xcassets */; };
+		C280C15EF12566BC957822F3 /* Airport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59511092BAE853F42C29A01C /* Airport.swift */; };
+		C86A7503574F58A844718614 /* GeoMathTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2BD35B0A5E45401EA300EF /* GeoMathTests.swift */; };
+		D6EDEA157232A8D99FB791EE /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B4680C98A9CA44BDD29F4F /* LocationService.swift */; };
+		D8560B33C161B41D1CBCACAD /* GlobeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880FED1650681011C34D2DE3 /* GlobeTests.swift */; };
+		DAC38F0F3F7E6E62EB44A8AB /* WorldAtlas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045EC2A25643796111672D2E /* WorldAtlas.swift */; };
+		DB5363FD7DDD5811F1F75A3F /* MillerProjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC506E29DE72715631F621D5 /* MillerProjection.swift */; };
+		E2835B1B79582C1854FF9C44 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AC213C4FCD275A82091335 /* AboutView.swift */; };
+		E384C7F622052158A0B32972 /* MapLabelPlanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE61813184956638B0D6968C /* MapLabelPlanner.swift */; };
+		E89709E562C6E706DC4E1515 /* ETAEstimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE9D03E809C54F6E3C6C65 /* ETAEstimator.swift */; };
+		EC01962F599E0513ACB1D8F7 /* SetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BF238518842C0EDB725445 /* SetupView.swift */; };
+		F1EE7D2082218E44E846ECFB /* FlightLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3556B59DB4D5D9730D726D /* FlightLiveActivity.swift */; };
+		FCC9ECFB5ED9A0902D9C296A /* PlaceFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC943DFEADB76B57EB9068E /* PlaceFinder.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		56632B59457914CE2D7D8947 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3893BBE3FFC8591899EE5560 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 83C3D0BC2A12F465ADCC8461;
+			remoteInfo = FlightGlance;
+		};
+		F3F97D56240ADAF89F1FFE9D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3893BBE3FFC8591899EE5560 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B720FD7DE1A7CE5382A3AFBD;
+			remoteInfo = FlightGlanceWidgets;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6E716468752BCC1C96F24B29 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				7B5FB74B1A046A505D37CB1D /* FlightGlanceWidgets.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		003D718C0A2D84E2DECE75E2 /* GlobeRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobeRenderer.swift; sourceTree = "<group>"; };
+		00F9CBF3F7FCCCBAC95011EB /* MapCamera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCamera.swift; sourceTree = "<group>"; };
+		045EC2A25643796111672D2E /* WorldAtlas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldAtlas.swift; sourceTree = "<group>"; };
+		06B86B77D568FBC7F2801666 /* MetricsGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsGrid.swift; sourceTree = "<group>"; };
+		1746AE0DFB8947F61B76F6E2 /* TrackRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackRecorder.swift; sourceTree = "<group>"; };
+		1982D56BA209546F0338EF67 /* ETAEstimatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETAEstimatorTests.swift; sourceTree = "<group>"; };
+		1BA9137B836EBA090B8C86DD /* Areas.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Areas.json; sourceTree = "<group>"; };
+		2EC943DFEADB76B57EB9068E /* PlaceFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceFinder.swift; sourceTree = "<group>"; };
+		3794BEBE89BFBDD58AE9DB95 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		37B4680C98A9CA44BDD29F4F /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		3BD65AB6F74FF3B723A28AF1 /* GPSFix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPSFix.swift; sourceTree = "<group>"; };
+		44A16ACD98CE61D0EEFD237A /* GlobeProjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobeProjection.swift; sourceTree = "<group>"; };
+		4731764C292481A05B2AD799 /* GeoCamera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoCamera.swift; sourceTree = "<group>"; };
+		4DB400C1C3C95D6123134A53 /* UnitSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitSystem.swift; sourceTree = "<group>"; };
+		5481623BE85EF793C3420A4D /* ReadingsSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingsSummary.swift; sourceTree = "<group>"; };
+		59511092BAE853F42C29A01C /* Airport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Airport.swift; sourceTree = "<group>"; };
+		644A6B43F1BB6DB110FB92DC /* FlightSimulation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightSimulation.swift; sourceTree = "<group>"; };
+		68B0DF192EE9B9D56755CD7A /* FlightSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightSession.swift; sourceTree = "<group>"; };
+		6CD6DC71B702D98C2B33F05F /* GPSSignalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPSSignalState.swift; sourceTree = "<group>"; };
+		6EB4E2BA4D22A1B9F299658B /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		701D5F044F5721D7F215D449 /* Airports.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Airports.json; sourceTree = "<group>"; };
+		7025CA5316F65A06A6B73A15 /* FlightStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightStore.swift; sourceTree = "<group>"; };
+		71895F3EBA361F704763C89B /* AtlasRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtlasRenderer.swift; sourceTree = "<group>"; };
+		740F6F7616B3D18E46E28D58 /* GeoMath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoMath.swift; sourceTree = "<group>"; };
+		7D1C977C5769F138E20453DF /* AtlasMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtlasMapView.swift; sourceTree = "<group>"; };
+		7DF8E06D966B6A5CE47B5DC9 /* WorldAtlas.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = WorldAtlas.bin; sourceTree = "<group>"; };
+		802EA6AE0D6C61B1AB130948 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		8523DCE36CB4A59C267AF4E2 /* TrackingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingTests.swift; sourceTree = "<group>"; };
+		85582547642FED2C290B91B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		86B25780B5684FB9D84D8EEF /* AirportPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportPickerView.swift; sourceTree = "<group>"; };
+		86D6E9EE2C28FA220933815B /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		87E9C3A17C9B3CF2F46C7D38 /* Towns.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Towns.json; sourceTree = "<group>"; };
+		880FED1650681011C34D2DE3 /* GlobeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobeTests.swift; sourceTree = "<group>"; };
+		8AB9D1AE7EC271FF053A2D46 /* StatusViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusViews.swift; sourceTree = "<group>"; };
+		95BE0A77F3159FA7F2A59582 /* Cities.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Cities.json; sourceTree = "<group>"; };
+		9CF319952C947CD1068BE755 /* DataAndServicesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAndServicesTests.swift; sourceTree = "<group>"; };
+		A0BF238518842C0EDB725445 /* SetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupView.swift; sourceTree = "<group>"; };
+		A1611C309182E83C36C37D54 /* Countries.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Countries.json; sourceTree = "<group>"; };
+		AFADFC0F79DEC44091986475 /* Regions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Regions.json; sourceTree = "<group>"; };
+		B10A71B96337359DBFC77EF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B58ED8D6EE7B59F098BBB600 /* FlightGlance.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = FlightGlance.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF2BD35B0A5E45401EA300EF /* GeoMathTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoMathTests.swift; sourceTree = "<group>"; };
+		BF53173FF4D074757EFFD632 /* AirportDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportDatabase.swift; sourceTree = "<group>"; };
+		C0B8BD866B7B5AE8D72130AD /* MapAnnotations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAnnotations.swift; sourceTree = "<group>"; };
+		C4AC213C4FCD275A82091335 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		C96CA2EEED84455BB7FD1158 /* FlightActivityAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightActivityAttributes.swift; sourceTree = "<group>"; };
+		CDDED754A992A4CB00E1A3D5 /* FlightGlanceTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = FlightGlanceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEEE9D03E809C54F6E3C6C65 /* ETAEstimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETAEstimator.swift; sourceTree = "<group>"; };
+		CF104BAD266A3B54BA99159C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D480D44C7FF4CB14AE8A78D8 /* LiveActivityController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivityController.swift; sourceTree = "<group>"; };
+		DC506E29DE72715631F621D5 /* MillerProjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MillerProjection.swift; sourceTree = "<group>"; };
+		DE61813184956638B0D6968C /* MapLabelPlanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapLabelPlanner.swift; sourceTree = "<group>"; };
+		E11045B0C9748BFA52F88D28 /* LocationStatusCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationStatusCard.swift; sourceTree = "<group>"; };
+		E83978F7E2D69C60A06CCA7B /* FlightGlanceWidgets.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = FlightGlanceWidgets.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB390BE98E9954BA0737452B /* ProjectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectionTests.swift; sourceTree = "<group>"; };
+		EF05602CC67C984B8FB3F031 /* FlightGlanceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightGlanceApp.swift; sourceTree = "<group>"; };
+		FA3556B59DB4D5D9730D726D /* FlightLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightLiveActivity.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		04845CFBBA72884203479E6E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				BF53173FF4D074757EFFD632 /* AirportDatabase.swift */,
+				644A6B43F1BB6DB110FB92DC /* FlightSimulation.swift */,
+				7025CA5316F65A06A6B73A15 /* FlightStore.swift */,
+				D480D44C7FF4CB14AE8A78D8 /* LiveActivityController.swift */,
+				37B4680C98A9CA44BDD29F4F /* LocationService.swift */,
+				2EC943DFEADB76B57EB9068E /* PlaceFinder.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		2DAA4990C2639164E6BE7CEF /* Tracking */ = {
+			isa = PBXGroup;
+			children = (
+				CEEE9D03E809C54F6E3C6C65 /* ETAEstimator.swift */,
+				68B0DF192EE9B9D56755CD7A /* FlightSession.swift */,
+				6CD6DC71B702D98C2B33F05F /* GPSSignalState.swift */,
+				1746AE0DFB8947F61B76F6E2 /* TrackRecorder.swift */,
+			);
+			path = Tracking;
+			sourceTree = "<group>";
+		};
+		31F6AEDAB22A256E9C6E18E8 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				6EB4E2BA4D22A1B9F299658B /* Theme.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		49EE22CC8AF8016F4F811BEA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				59511092BAE853F42C29A01C /* Airport.swift */,
+				3BD65AB6F74FF3B723A28AF1 /* GPSFix.swift */,
+				4DB400C1C3C95D6123134A53 /* UnitSystem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		52F296749A5AFD4239503842 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				31F6AEDAB22A256E9C6E18E8 /* Components */,
+				DEC8D5D813E6E8D2A35012BF /* Dashboard */,
+				AFECD8CEA9FD611A65155F74 /* Info */,
+				82069494E0C2D7B00F399D65 /* Map */,
+				FD01E1EF96EDB638FFB8DCFA /* Setup */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		582BDF7D0D8A15AFC4366262 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				648873CE50F6FDD7BD59F187 /* Data */,
+				CF104BAD266A3B54BA99159C /* Assets.xcassets */,
+				802EA6AE0D6C61B1AB130948 /* PrivacyInfo.xcprivacy */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5FF8F98272AB1D4D57A5FF5C /* FlightGlanceTests */ = {
+			isa = PBXGroup;
+			children = (
+				9CF319952C947CD1068BE755 /* DataAndServicesTests.swift */,
+				1982D56BA209546F0338EF67 /* ETAEstimatorTests.swift */,
+				BF2BD35B0A5E45401EA300EF /* GeoMathTests.swift */,
+				880FED1650681011C34D2DE3 /* GlobeTests.swift */,
+				EB390BE98E9954BA0737452B /* ProjectionTests.swift */,
+				8523DCE36CB4A59C267AF4E2 /* TrackingTests.swift */,
+			);
+			path = FlightGlanceTests;
+			sourceTree = "<group>";
+		};
+		648873CE50F6FDD7BD59F187 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				701D5F044F5721D7F215D449 /* Airports.json */,
+				1BA9137B836EBA090B8C86DD /* Areas.json */,
+				95BE0A77F3159FA7F2A59582 /* Cities.json */,
+				A1611C309182E83C36C37D54 /* Countries.json */,
+				AFADFC0F79DEC44091986475 /* Regions.json */,
+				87E9C3A17C9B3CF2F46C7D38 /* Towns.json */,
+				7DF8E06D966B6A5CE47B5DC9 /* WorldAtlas.bin */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		67462BAB65BAB4769ADE60D1 /* FlightGlanceWidgets */ = {
+			isa = PBXGroup;
+			children = (
+				FA3556B59DB4D5D9730D726D /* FlightLiveActivity.swift */,
+				B10A71B96337359DBFC77EF8 /* Info.plist */,
+			);
+			path = FlightGlanceWidgets;
+			sourceTree = "<group>";
+		};
+		6D258C715BE7186B85DBF3EA /* Atlas */ = {
+			isa = PBXGroup;
+			children = (
+				71895F3EBA361F704763C89B /* AtlasRenderer.swift */,
+				003D718C0A2D84E2DECE75E2 /* GlobeRenderer.swift */,
+				C0B8BD866B7B5AE8D72130AD /* MapAnnotations.swift */,
+				DE61813184956638B0D6968C /* MapLabelPlanner.swift */,
+				045EC2A25643796111672D2E /* WorldAtlas.swift */,
+			);
+			path = Atlas;
+			sourceTree = "<group>";
+		};
+		82069494E0C2D7B00F399D65 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				7D1C977C5769F138E20453DF /* AtlasMapView.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		85A7FDB0939A1AC572AD2F4D /* App */ = {
+			isa = PBXGroup;
+			children = (
+				86D6E9EE2C28FA220933815B /* AppModel.swift */,
+				EF05602CC67C984B8FB3F031 /* FlightGlanceApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		934F76BA6BB9CF6C517EAE0F /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				C96CA2EEED84455BB7FD1158 /* FlightActivityAttributes.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		A7986D6C065B26737B558039 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B58ED8D6EE7B59F098BBB600 /* FlightGlance.app */,
+				CDDED754A992A4CB00E1A3D5 /* FlightGlanceTests.xctest */,
+				E83978F7E2D69C60A06CCA7B /* FlightGlanceWidgets.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AA5568D89827C0AF74575277 /* Geo */ = {
+			isa = PBXGroup;
+			children = (
+				4731764C292481A05B2AD799 /* GeoCamera.swift */,
+				740F6F7616B3D18E46E28D58 /* GeoMath.swift */,
+				44A16ACD98CE61D0EEFD237A /* GlobeProjection.swift */,
+				00F9CBF3F7FCCCBAC95011EB /* MapCamera.swift */,
+				DC506E29DE72715631F621D5 /* MillerProjection.swift */,
+			);
+			path = Geo;
+			sourceTree = "<group>";
+		};
+		AFECD8CEA9FD611A65155F74 /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				C4AC213C4FCD275A82091335 /* AboutView.swift */,
+			);
+			path = Info;
+			sourceTree = "<group>";
+		};
+		C1784D5108F495AF1A8879F6 /* FlightGlance */ = {
+			isa = PBXGroup;
+			children = (
+				85A7FDB0939A1AC572AD2F4D /* App */,
+				6D258C715BE7186B85DBF3EA /* Atlas */,
+				AA5568D89827C0AF74575277 /* Geo */,
+				49EE22CC8AF8016F4F811BEA /* Models */,
+				582BDF7D0D8A15AFC4366262 /* Resources */,
+				04845CFBBA72884203479E6E /* Services */,
+				2DAA4990C2639164E6BE7CEF /* Tracking */,
+				52F296749A5AFD4239503842 /* Views */,
+				85582547642FED2C290B91B8 /* Info.plist */,
+			);
+			path = FlightGlance;
+			sourceTree = "<group>";
+		};
+		C77A7BB3AACE0DC70B9A11DB = {
+			isa = PBXGroup;
+			children = (
+				C1784D5108F495AF1A8879F6 /* FlightGlance */,
+				5FF8F98272AB1D4D57A5FF5C /* FlightGlanceTests */,
+				67462BAB65BAB4769ADE60D1 /* FlightGlanceWidgets */,
+				934F76BA6BB9CF6C517EAE0F /* Shared */,
+				A7986D6C065B26737B558039 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DEC8D5D813E6E8D2A35012BF /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				3794BEBE89BFBDD58AE9DB95 /* DashboardView.swift */,
+				06B86B77D568FBC7F2801666 /* MetricsGrid.swift */,
+				5481623BE85EF793C3420A4D /* ReadingsSummary.swift */,
+				8AB9D1AE7EC271FF053A2D46 /* StatusViews.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		FD01E1EF96EDB638FFB8DCFA /* Setup */ = {
+			isa = PBXGroup;
+			children = (
+				86B25780B5684FB9D84D8EEF /* AirportPickerView.swift */,
+				E11045B0C9748BFA52F88D28 /* LocationStatusCard.swift */,
+				A0BF238518842C0EDB725445 /* SetupView.swift */,
+			);
+			path = Setup;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2C1C13D4D3FDB3F4ABFAE9D6 /* FlightGlanceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 41449B26CE131E68AD5201E4 /* Build configuration list for PBXNativeTarget "FlightGlanceTests" */;
+			buildPhases = (
+				546A146F56618FD29D134FDF /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3DF84CF8037A1A1B6507BA92 /* PBXTargetDependency */,
+			);
+			name = FlightGlanceTests;
+			packageProductDependencies = (
+			);
+			productName = FlightGlanceTests;
+			productReference = CDDED754A992A4CB00E1A3D5 /* FlightGlanceTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		83C3D0BC2A12F465ADCC8461 /* FlightGlance */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F85E95AFE0A72FE68E5AFB1D /* Build configuration list for PBXNativeTarget "FlightGlance" */;
+			buildPhases = (
+				5786EA0589B02FBD3509BEAB /* Sources */,
+				2BD732BB1EACD45D4DF38CE9 /* Resources */,
+				6E716468752BCC1C96F24B29 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3998168F256ADE2EE7097510 /* PBXTargetDependency */,
+			);
+			name = FlightGlance;
+			packageProductDependencies = (
+			);
+			productName = FlightGlance;
+			productReference = B58ED8D6EE7B59F098BBB600 /* FlightGlance.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B720FD7DE1A7CE5382A3AFBD /* FlightGlanceWidgets */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 12455624AC0F550080C123FD /* Build configuration list for PBXNativeTarget "FlightGlanceWidgets" */;
+			buildPhases = (
+				CC3C9681ECD8F4BDF835ED22 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FlightGlanceWidgets;
+			packageProductDependencies = (
+			);
+			productName = FlightGlanceWidgets;
+			productReference = E83978F7E2D69C60A06CCA7B /* FlightGlanceWidgets.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3893BBE3FFC8591899EE5560 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					83C3D0BC2A12F465ADCC8461 = {
+						ProvisioningStyle = Automatic;
+					};
+					B720FD7DE1A7CE5382A3AFBD = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 3AB90F9F37B3C5AEE2B0C9A4 /* Build configuration list for PBXProject "FlightGlance" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = C77A7BB3AACE0DC70B9A11DB;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = A7986D6C065B26737B558039 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				83C3D0BC2A12F465ADCC8461 /* FlightGlance */,
+				B720FD7DE1A7CE5382A3AFBD /* FlightGlanceWidgets */,
+				2C1C13D4D3FDB3F4ABFAE9D6 /* FlightGlanceTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2BD732BB1EACD45D4DF38CE9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EC06D1729C73ABDD5187211 /* Airports.json in Resources */,
+				9B5FEDBE83D1A77180154997 /* Areas.json in Resources */,
+				C2608E61F6EEEBBF9AB00E2D /* Assets.xcassets in Resources */,
+				95E516377FD93C83CCE6C025 /* Cities.json in Resources */,
+				19EDA661B6678DD8390AD65E /* Countries.json in Resources */,
+				B1E47B0E14A67B7EE8B2E071 /* PrivacyInfo.xcprivacy in Resources */,
+				4F52E175B918139F4CB7EB10 /* Regions.json in Resources */,
+				890A29234CDD59DC48D614AC /* Towns.json in Resources */,
+				575D2A50437E0E9C59D12AE8 /* WorldAtlas.bin in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		546A146F56618FD29D134FDF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65AA20FB64C91ACDEEE51440 /* DataAndServicesTests.swift in Sources */,
+				0CF32AD94341650F53B278D8 /* ETAEstimatorTests.swift in Sources */,
+				C86A7503574F58A844718614 /* GeoMathTests.swift in Sources */,
+				D8560B33C161B41D1CBCACAD /* GlobeTests.swift in Sources */,
+				2C24D5AB282EB57B9EFAB6FD /* ProjectionTests.swift in Sources */,
+				2E72E96583DCDCAEDC80AB6F /* TrackingTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5786EA0589B02FBD3509BEAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2835B1B79582C1854FF9C44 /* AboutView.swift in Sources */,
+				C280C15EF12566BC957822F3 /* Airport.swift in Sources */,
+				B66CD8E68AC68CFBC7C22A68 /* AirportDatabase.swift in Sources */,
+				AB95EDF8CF84538EFF941263 /* AirportPickerView.swift in Sources */,
+				65BAD0729BBC863C6254A483 /* AppModel.swift in Sources */,
+				302CE9C1434822D342CA32E3 /* AtlasMapView.swift in Sources */,
+				13D61E618963C68E650C94AD /* AtlasRenderer.swift in Sources */,
+				4B47C0E70C7B2F9177A34491 /* DashboardView.swift in Sources */,
+				E89709E562C6E706DC4E1515 /* ETAEstimator.swift in Sources */,
+				7044108C3200B7E3CEB1FE44 /* FlightActivityAttributes.swift in Sources */,
+				7BB7744B4119630B4C6F7778 /* FlightGlanceApp.swift in Sources */,
+				006307F968E94E6D46F50326 /* FlightSession.swift in Sources */,
+				167DBFA47A2A933B2DAE4A37 /* FlightSimulation.swift in Sources */,
+				48F9CBFF809B50892AAFF8DB /* FlightStore.swift in Sources */,
+				5F207DAE6AE96892F0DE8F62 /* GPSFix.swift in Sources */,
+				6DDFE68626C73D7CF6933E8D /* GPSSignalState.swift in Sources */,
+				1A6E9D736DCB9418438CE34E /* GeoCamera.swift in Sources */,
+				786FA5ADF71DA9CA40E2E552 /* GeoMath.swift in Sources */,
+				592AD5D9DB7264B9EB5A719B /* GlobeProjection.swift in Sources */,
+				BD4C0A88C0AEDD30155C66E9 /* GlobeRenderer.swift in Sources */,
+				7473E6FEC9DACA4FC69CBDC5 /* LiveActivityController.swift in Sources */,
+				D6EDEA157232A8D99FB791EE /* LocationService.swift in Sources */,
+				28C0938B1064A7B59C4A68F2 /* LocationStatusCard.swift in Sources */,
+				5C061C3F9EF8BCAF30663F27 /* MapAnnotations.swift in Sources */,
+				B41109346C83FBDAD76DF44E /* MapCamera.swift in Sources */,
+				E384C7F622052158A0B32972 /* MapLabelPlanner.swift in Sources */,
+				99640038D1EB5E403F312AF6 /* MetricsGrid.swift in Sources */,
+				DB5363FD7DDD5811F1F75A3F /* MillerProjection.swift in Sources */,
+				FCC9ECFB5ED9A0902D9C296A /* PlaceFinder.swift in Sources */,
+				8B7DA58E3F407AEEA10297A9 /* ReadingsSummary.swift in Sources */,
+				EC01962F599E0513ACB1D8F7 /* SetupView.swift in Sources */,
+				3F22B16D8F9B008AD575C03D /* StatusViews.swift in Sources */,
+				1C7280672CBE7ABF2FF0806D /* Theme.swift in Sources */,
+				666BFC0C440A98B3D49EA33B /* TrackRecorder.swift in Sources */,
+				0EE6F61CEFE8D6DDAF4BFA88 /* UnitSystem.swift in Sources */,
+				DAC38F0F3F7E6E62EB44A8AB /* WorldAtlas.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC3C9681ECD8F4BDF835ED22 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				276CF58B8E8A995FA8EF3497 /* FlightActivityAttributes.swift in Sources */,
+				F1EE7D2082218E44E846ECFB /* FlightLiveActivity.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3998168F256ADE2EE7097510 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B720FD7DE1A7CE5382A3AFBD /* FlightGlanceWidgets */;
+			targetProxy = F3F97D56240ADAF89F1FFE9D /* PBXContainerItemProxy */;
+		};
+		3DF84CF8037A1A1B6507BA92 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 83C3D0BC2A12F465ADCC8461 /* FlightGlance */;
+			targetProxy = 56632B59457914CE2D7D8947 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1A79E7810F4286ECBFF3D111 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FlightGlanceWidgets/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = app.flightglance.FlightGlance.Widgets;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		1FA896E465DF2AAD152BE84B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = FlightGlance/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = app.flightglance.FlightGlance;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		6CBE6D41407BF9468F23203C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FlightGlanceWidgets/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = app.flightglance.FlightGlance.Widgets;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		73AE38D53C28005198D6340A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		A71ED5C557CE63289282A66C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = FlightGlance/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = app.flightglance.FlightGlance;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		AB66904B2C0BB3FA6725BAD9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		C4A9A284E58D708872AF5106 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = app.flightglance.FlightGlanceTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlightGlance.app/FlightGlance";
+			};
+			name = Debug;
+		};
+		D2A452D6772B0651289F8157 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = app.flightglance.FlightGlanceTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlightGlance.app/FlightGlance";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		12455624AC0F550080C123FD /* Build configuration list for PBXNativeTarget "FlightGlanceWidgets" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6CBE6D41407BF9468F23203C /* Debug */,
+				1A79E7810F4286ECBFF3D111 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		3AB90F9F37B3C5AEE2B0C9A4 /* Build configuration list for PBXProject "FlightGlance" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				73AE38D53C28005198D6340A /* Debug */,
+				AB66904B2C0BB3FA6725BAD9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		41449B26CE131E68AD5201E4 /* Build configuration list for PBXNativeTarget "FlightGlanceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4A9A284E58D708872AF5106 /* Debug */,
+				D2A452D6772B0651289F8157 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F85E95AFE0A72FE68E5AFB1D /* Build configuration list for PBXNativeTarget "FlightGlance" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A71ED5C557CE63289282A66C /* Debug */,
+				1FA896E465DF2AAD152BE84B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3893BBE3FFC8591899EE5560 /* Project object */;
+}
