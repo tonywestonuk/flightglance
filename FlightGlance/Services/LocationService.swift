@@ -12,6 +12,12 @@ import Observation
 /// fix (usually a few seconds — the receiver keeps its satellite data warm between samples),
 /// then switched off again.
 ///
+/// **Getting a lock.** That only works once the receiver has a lock. Starting cold (no recent
+/// satellite data, which in Airplane Mode it can't download) a first fix can take minutes of
+/// continuous listening, and switching the GPS off every sample would throw that work away.
+/// So without a recent good fix the GPS stays on until it gets one (in the low-power mode,
+/// for up to 2 minutes per sample), and the duty cycle starts from there.
+///
 /// Off screen there are two options, chosen by the app:
 /// * `pause()`: the GPS stops and iOS suspends the app.
 /// * `enterLowPowerBackground()`: for the Lock Screen Live Activity. The GPS is sampled only
@@ -43,8 +49,9 @@ final class LocationService {
 
     /// The sampling interval currently in force.
     var effectiveInterval: TimeInterval { isLowPower ? backgroundInterval : sampleInterval }
-    /// Longest the GPS stays on hunting for a fix in each sample.
-    var acquisitionTimeout: TimeInterval { isLowPower ? 30 : 45 }
+    /// Longest the GPS stays on hunting for a fix in each sample. On screen, a sample that ends
+    /// without a lock goes straight into the next one (see `isAcquiring`).
+    var acquisitionTimeout: TimeInterval { isLowPower ? (isAcquiring ? 120 : 30) : 45 }
     /// A fix at least this accurate ends the sample straight away.
     var goodEnoughAccuracy: Double { isLowPower ? 1_000 : 100 }
 
@@ -61,6 +68,14 @@ final class LocationService {
     @ObservationIgnored private var isSampling = false
     @ObservationIgnored private var sampleStarted: Date?
     @ObservationIgnored private var bestInSample: GPSFix?
+    /// When the receiver last produced a fix accurate enough to count as a GPS lock.
+    @ObservationIgnored private var lastLockTime: Date?
+
+    /// No lock recently, so the receiver may be starting cold and needs to listen for longer.
+    private var isAcquiring: Bool {
+        guard let lastLockTime else { return true }
+        return Date().timeIntervalSince(lastLockTime) > 2 * effectiveInterval
+    }
 
     /// Fixes older than this on arrival are cached positions, not live ones.
     private let maximumFixAgeOnArrival: TimeInterval = 30
@@ -113,6 +128,7 @@ final class LocationService {
         isUpdating = false
         updatesStarted = nil
         latestFix = nil
+        lastLockTime = nil
     }
 
     /// The app is leaving the screen: switch the GPS off and let iOS suspend the app.
@@ -208,7 +224,7 @@ final class LocationService {
         sampleStarted = Date()
         bestInSample = nil
         // Low power: a looser fix is plenty for "35 km SW of Lyon" and comes sooner.
-        manager.desiredAccuracy = isLowPower ? kCLLocationAccuracyHundredMeters : kCLLocationAccuracyNearestTenMeters
+        manager.desiredAccuracy = isLowPower ? kCLLocationAccuracyHundredMeters : kCLLocationAccuracyBest
         manager.distanceFilter = kCLDistanceFilterNone
         manager.startUpdatingLocation()
         let timeout = acquisitionTimeout
@@ -225,6 +241,11 @@ final class LocationService {
         // No good fix in time: a weaker one still beats nothing (the UI flags it as weak).
         if let best = bestInSample { deliver(best) }
         bestInSample = nil
+        if !isLowPower, isAcquiring {
+            // Still no lock: keep the GPS listening rather than restart its search later.
+            beginSample()
+            return
+        }
         if isLowPower { keepAlive() } else { manager.stopUpdatingLocation() }
         let next = max(Date().addingTimeInterval(2), (sampleStarted ?? Date()).addingTimeInterval(effectiveInterval))
         scheduleSample(at: next)
@@ -272,6 +293,7 @@ final class LocationService {
     }
 
     private func deliver(_ fix: GPSFix) {
+        if fix.horizontalAccuracy <= 100 { lastLockTime = fix.timestamp }
         latestFix = fix
         onFix?(fix)
     }
